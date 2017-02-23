@@ -49,19 +49,13 @@ angular.module('ui').directive('fancyList', ['$q', function($q) {
         });
       }
 
-      scope.toggleAll = function(){
+      scope.toggleAll = function() {
         scope.isAllChecked = !scope.isAllChecked;
         scope.isClean = true;
 
-        if (scope.isAllChecked) {
-          scope.items.forEach(function(item) {
-            item.checked = true;
-          });
-        } else {
-          scope.items.forEach(function(item) {
-            item.checked = false;
-          });
-        }
+        scope.items.forEach(function(item) {
+          item.checked = scope.isAllChecked;
+        });
       };
     }
   };
