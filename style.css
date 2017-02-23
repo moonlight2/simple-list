@@ -1,0 +1,50 @@
+body {
+  font-family: "Open Sans",Arial,sans-serif;
+  line-height: 1.5;
+}
+
+.content {
+  width: 200px;
+  height: 300px;
+  margin: 100px auto;
+}
+
+.fancy-row {
+  padding: 5px 25px;
+  position: relative;
+}
+
+.fancy-row::before {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 0px;
+  top: 9px;
+  border: 1px solid #c0c0c0;
+  content: ' ';
+  border-radius: 3px;
+}
+
+.fancy-row.dirty::after {
+  height: 2px;
+  position: absolute;
+  left: 2px;
+  top: 16px;
+  background: #c0c0c0;
+  content: ' ';
+  width: 12px;
+}
+
+.fancy-row.dirty::before {
+  background: aliceblue;
+}
+
+.fancy-row.checked::before {
+  width: 16px;
+  height: 16px;
+  border: none;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  content: url('check.png');
+}

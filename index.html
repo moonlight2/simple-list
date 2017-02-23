@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="ui">
+  <div ng-controller="ListPageController as ctrl">
+      <div class="content">
+          <fancy-list source="ctrl.getData()"></fancy-list>
+      </div>
+  </div>
+</body>
+</html>

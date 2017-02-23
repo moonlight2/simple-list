@@ -1,0 +1,12 @@
+<div ng-click="toggleAll()"
+     class="fancy-row"
+     ng-class="{'checked': isAllChecked, 'dirty': !isClean}">
+    <span>All/None</span>
+</div>
+<div ng-repeat="item in items">
+    <div class="fancy-row"
+         ng-class="{'checked': item.checked}"
+         ng-click="toggleCheckbox(item)">
+        <span>{{item.value}}</span>
+    </div>
+</div>
